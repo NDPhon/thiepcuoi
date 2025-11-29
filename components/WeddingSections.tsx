@@ -297,7 +297,11 @@ export const GallerySection: React.FC = () => (
 );
 
 // --- Section 8: Footer ---
-export const FooterSection: React.FC = () => (
+interface FooterSectionProps {
+    onClose?: () => void;
+}
+
+export const FooterSection: React.FC<FooterSectionProps> = ({ onClose }) => (
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
             <img src={IMAGES.footer} alt="Thank you" className="w-full h-full object-cover" />
@@ -307,11 +311,18 @@ export const FooterSection: React.FC = () => (
         <AnimatedSection className="relative z-10 text-center text-white px-4">
              <h2 className="font-script text-7xl md:text-9xl mb-4">Thank You</h2>
              <p className="font-serif text-xl md:text-2xl italic opacity-90">Rất hân hạnh được đón tiếp!</p>
-             <div className="mt-8 border border-white/50 inline-block p-4 rounded-full animate-bounce">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             
+             {/* Close Button / Back to Envelope */}
+             <div 
+                onClick={onClose}
+                className="mt-8 border border-white/50 inline-block p-4 rounded-full animate-bounce cursor-pointer hover:bg-white/10 transition-colors group"
+                title="Đóng thiệp"
+             >
+                <svg className="w-6 h-6 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
                 </svg>
              </div>
+             <p className="text-xs uppercase tracking-widest mt-2 opacity-70">Đóng thiệp</p>
         </AnimatedSection>
     </section>
 );

@@ -25,6 +25,12 @@ const App: React.FC = () => {
     }
   };
 
+  const handleClose = () => {
+    setIsOpened(false);
+    // Scroll back to top when closing so it's ready for next open
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen relative font-sans text-stone-600">
       {/* Background Music Controller */}
@@ -60,7 +66,7 @@ const App: React.FC = () => {
         <GallerySection />
 
         {/* Section 8: Footer/Thanks */}
-        <FooterSection />
+        <FooterSection onClose={handleClose} />
 
       </main>
     </div>

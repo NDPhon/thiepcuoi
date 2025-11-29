@@ -9,7 +9,7 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
   return (
     <div 
       className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${IMAGES.envelope})` }}
+      style={{ backgroundImage: `url('${IMAGES.envelope}')` }}
     >
         {/* Overlay to ensure text is readable over the background image */}
         <div className="absolute inset-0 bg-white/90"></div>

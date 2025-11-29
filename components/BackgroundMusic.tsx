@@ -8,12 +8,24 @@ interface BackgroundMusicProps {
 export const BackgroundMusic: React.FC<BackgroundMusicProps> = ({ audioRef, isOpened }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Royalty free wedding music placeholder
-  const musicUrl = "https://cdn.pixabay.com/download/audio/2022/10/25/audio_472535c5c1.mp3?filename=wedding-piano-125026.mp3"; 
+  // Updated to local file as requested
+  const musicUrl = "/mp3.mp3"; 
 
   useEffect(() => {
     if (isOpened && audioRef.current) {
-      setIsPlaying(!audioRef.current.paused);
+      // Attempt to play immediately when opened
+      const playPromise = audioRef.current.play();
+      
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsPlaying(true);
+          })
+          .catch((error) => {
+            console.log("Autoplay prevented by browser:", error);
+            setIsPlaying(false);
+          });
+      }
     }
   }, [isOpened, audioRef]);
 

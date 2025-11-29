@@ -58,14 +58,6 @@ export const HeroSection: React.FC<{ data: WeddingData }> = ({ data }) => (
 // --- Section 2: Family ---
 export const FamilySection: React.FC<{ data: WeddingData }> = ({ data }) => (
   <section className="py-20 px-4 max-w-5xl mx-auto bg-white/50 rounded-3xl my-10 shadow-sm border border-stone-100 relative overflow-hidden">
-     {/* Decorative Leaves */}
-     <div className="absolute top-0 left-0 w-32 -ml-10 -mt-10 opacity-30 rotate-180">
-        <img src="https://img.freepik.com/free-vector/hand-drawn-olive-branch_23-2148028779.jpg" className="mix-blend-multiply" alt="leaf" />
-     </div>
-     <div className="absolute bottom-0 right-0 w-32 -mr-10 -mb-10 opacity-30">
-        <img src="https://img.freepik.com/free-vector/hand-drawn-olive-branch_23-2148028779.jpg" className="mix-blend-multiply" alt="leaf" />
-     </div>
-
     <AnimatedSection className="text-center">
       <div className="border-l-2 border-sage-400 pl-6 inline-block text-left mb-16">
         <h2 className="font-serif text-4xl md:text-5xl mb-2 text-stone-800">Thư Mời Cưới</h2>

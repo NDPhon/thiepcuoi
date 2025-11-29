@@ -18,11 +18,14 @@ const App: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleOpen = () => {
-    setIsOpened(true);
-    // Try to play music when user interacts (opens envelope)
+    // 1. Play audio immediately within the click event handler
+    // This satisfies browser autoplay policies because it's a direct user interaction
     if (audioRef.current) {
       audioRef.current.play().catch(e => console.log("Audio play failed (browser policy):", e));
     }
+
+    // 2. Start animation
+    setIsOpened(true);
   };
 
   const handleClose = () => {

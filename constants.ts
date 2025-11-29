@@ -19,16 +19,16 @@ export const WEDDING_DATA: WeddingData = {
   groom: {
     name: "Nguyễn Tấn Rin",
     parents: {
-      father: "Ông Đặng Văn Nam",
-      mother: "Bà Đỗ Thanh Huyền"
+      father: "Ông Nguyễn Tấn Phúc",
+      mother: "Bà Nguyễn Thị Minh"
     },
     image: IMAGES.groom
   },
   bride: {
     name: "Lê Thị Thanh Thảo",
     parents: {
-      father: "Ông Trương Phú",
-      mother: "Bà Mai Thị Thu Hằng"
+      father: "Ông Lê Thanh Quang",
+      mother: "Bà Lê Thị Hoa"
     },
     image: IMAGES.bride
   },

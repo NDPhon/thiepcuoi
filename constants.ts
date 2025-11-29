@@ -17,7 +17,7 @@ export const IMAGES = {
 
 export const WEDDING_DATA: WeddingData = {
   groom: {
-    name: "Trung Hiếu",
+    name: "Nguyễn Tấn Rin",
     parents: {
       father: "Ông Đặng Văn Nam",
       mother: "Bà Đỗ Thanh Huyền"
@@ -25,7 +25,7 @@ export const WEDDING_DATA: WeddingData = {
     image: IMAGES.groom
   },
   bride: {
-    name: "Quỳnh Nhi",
+    name: "Lê Thị Thanh Thảo",
     parents: {
       father: "Ông Trương Phú",
       mother: "Bà Mai Thị Thu Hằng"

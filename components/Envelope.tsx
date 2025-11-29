@@ -22,7 +22,7 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
         </div>
 
         <div className="font-script text-6xl md:text-8xl text-sage-600 animate-float">
-          Quỳnh Nhi <br /> <span className="text-4xl text-stone-400">&</span> <br /> Trung Hiếu
+          Lê Thị Thanh Thảo <br /> <span className="text-4xl text-stone-400">&</span> <br /> Nguyễn Tấn Rin
         </div>
 
         <div className="pt-8">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 interface BackgroundMusicProps {
   audioRef: React.MutableRefObject<HTMLAudioElement | null>;
@@ -11,38 +11,26 @@ export const BackgroundMusic: React.FC<BackgroundMusicProps> = ({ audioRef, isOp
   // Updated to local file as requested
   const musicUrl = "/mp3.mp3"; 
 
-  useEffect(() => {
-    if (isOpened && audioRef.current) {
-      // Attempt to play immediately when opened
-      const playPromise = audioRef.current.play();
-      
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            setIsPlaying(true);
-          })
-          .catch((error) => {
-            console.log("Autoplay prevented by browser:", error);
-            setIsPlaying(false);
-          });
-      }
-    }
-  }, [isOpened, audioRef]);
-
   const toggleMusic = () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play();
+        audioRef.current.play().catch(e => console.error("Play failed:", e));
       }
-      setIsPlaying(!isPlaying);
     }
   };
 
   return (
     <div className={`fixed bottom-4 right-4 z-40 transition-opacity duration-1000 ${isOpened ? 'opacity-100' : 'opacity-0'}`}>
-      <audio ref={audioRef} loop src={musicUrl} />
+      <audio 
+        ref={audioRef} 
+        loop 
+        src={musicUrl} 
+        preload="auto"
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+      />
       <button
         onClick={toggleMusic}
         className="w-10 h-10 md:w-12 md:h-12 bg-white/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-sage-600 hover:bg-sage-100 transition-colors border border-sage-200"

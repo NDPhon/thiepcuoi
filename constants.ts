@@ -13,7 +13,7 @@ export const IMAGES = {
   gallery3: "/3.jpg",
   gallery4: "/4.jpg",
   gallery5: "/6.jpg",
-  footer: "/8.jpg", // Section 8
+  footer: "/1.jpg", // Section 8 - temporarily changed to 1.jpg
 };
 
 export const WEDDING_DATA: WeddingData = {

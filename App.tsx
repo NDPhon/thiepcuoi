@@ -1,17 +1,17 @@
-import React, { useState, useRef } from 'react';
-import { BackgroundMusic } from './components/BackgroundMusic';
-import { Envelope } from './components/Envelope';
-import { 
-  HeroSection, 
-  FamilySection, 
-  CoupleSection, 
-  EventDetailsSection, 
-  CalendarSection, 
-  LocationSection, 
-  GallerySection, 
-  FooterSection 
-} from './components/WeddingSections';
-import { WEDDING_DATA } from './constants';
+import React, { useState, useRef } from "react";
+import { BackgroundMusic } from "./components/BackgroundMusic";
+import { Envelope } from "./components/Envelope";
+import {
+  HeroSection,
+  FamilySection,
+  CoupleSection,
+  EventDetailsSection,
+  CalendarSection,
+  LocationSection,
+  GallerySection,
+  FooterSection,
+} from "./components/WeddingSections";
+import { WEDDING_DATA } from "./constants";
 
 const App: React.FC = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -24,9 +24,9 @@ const App: React.FC = () => {
       // Set volume to 50% for a pleasant start
       audioRef.current.volume = 0.5;
       const playPromise = audioRef.current.play();
-      
+
       if (playPromise !== undefined) {
-        playPromise.catch(error => {
+        playPromise.catch((error) => {
           console.log("Audio play failed (browser policy):", error);
         });
       }
@@ -39,7 +39,7 @@ const App: React.FC = () => {
   const handleClose = () => {
     setIsOpened(false);
     // Scroll back to top when closing so it's ready for next open
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -48,13 +48,20 @@ const App: React.FC = () => {
       <BackgroundMusic audioRef={audioRef} isOpened={isOpened} />
 
       {/* Opening Animation / Envelope */}
-      <div className={`fixed inset-0 z-50 transition-transform duration-1000 ease-in-out ${isOpened ? '-translate-y-full' : 'translate-y-0'}`}>
+      <div
+        className={`fixed inset-0 z-50 transition-transform duration-1000 ease-in-out ${
+          isOpened ? "-translate-y-full" : "translate-y-0"
+        }`}
+      >
         <Envelope onOpen={handleOpen} />
       </div>
 
       {/* Main Content (Visible after scroll/open) */}
-      <main className={`transition-opacity duration-1000 ${isOpened ? 'opacity-100' : 'opacity-0'}`}>
-        
+      <main
+        className={`transition-opacity duration-1000 ${
+          isOpened ? "opacity-100" : "opacity-0"
+        }`}
+      >
         {/* Section 1: Hero / Top Photo */}
         <HeroSection data={WEDDING_DATA} />
 
@@ -78,7 +85,6 @@ const App: React.FC = () => {
 
         {/* Section 8: Footer/Thanks */}
         <FooterSection onClose={handleClose} />
-
       </main>
     </div>
   );

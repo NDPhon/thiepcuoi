@@ -13,16 +13,16 @@ export const BackgroundMusic: React.FC<BackgroundMusicProps> = ({ audioRef, isOp
 
   const toggleMusic = () => {
     if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
+      if (audioRef.current.paused) {
         audioRef.current.play().catch(e => console.error("Play failed:", e));
+      } else {
+        audioRef.current.pause();
       }
     }
   };
 
   return (
-    <div className={`fixed bottom-4 right-4 z-40 transition-opacity duration-1000 ${isOpened ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`fixed bottom-4 right-4 z-40 transition-all duration-1000 ${isOpened ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
       <audio 
         ref={audioRef} 
         loop 
@@ -33,21 +33,24 @@ export const BackgroundMusic: React.FC<BackgroundMusicProps> = ({ audioRef, isOp
       />
       <button
         onClick={toggleMusic}
-        className="w-10 h-10 md:w-12 md:h-12 bg-white/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-sage-600 hover:bg-sage-100 transition-colors border border-sage-200"
+        className="w-10 h-10 md:w-12 md:h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-sage-600 hover:bg-sage-100 transition-transform hover:scale-105 border border-sage-200"
         title={isPlaying ? "Tắt nhạc" : "Bật nhạc"}
+        aria-label={isPlaying ? "Pause music" : "Play music"}
       >
         {isPlaying ? (
+          // Playing Icon: Spinning Music Note
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 animate-spin-slow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 18V5l12-2v13"></path>
             <circle cx="6" cy="18" r="3"></circle>
             <circle cx="18" cy="16" r="3"></circle>
           </svg>
         ) : (
+          // Paused Icon: Music Note with Strikethrough
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="1" y1="1" x2="23" y2="23"></line>
             <path d="M9 18V5l12-2v13"></path>
             <circle cx="6" cy="18" r="3"></circle>
             <circle cx="18" cy="16" r="3"></circle>
+            <line x1="3" y1="3" x2="21" y2="21" strokeOpacity="0.6"></line>
           </svg>
         )}
       </button>

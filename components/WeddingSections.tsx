@@ -156,7 +156,9 @@ export const EventDetailsSection: React.FC<{ data: WeddingData }> = ({ data }) =
                 </div>
 
                 <div className="flex justify-center items-baseline gap-2 font-bold text-sage-800 mb-2">
-                    <span className="text-4xl md:text-5xl tracking-widest">{data.date.day} . {data.date.month} . {data.date.year}</span>
+                    <span className="text-4xl md:text-5xl tracking-widest">
+                        {String(data.date.day).padStart(2, '0')} . {String(data.date.month).padStart(2, '0')} . {data.date.year}
+                    </span>
                 </div>
 
                 <p className="italic text-stone-500 font-serif text-base mb-6">

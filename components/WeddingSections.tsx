@@ -47,9 +47,9 @@ export const HeroSection: React.FC<{ data: WeddingData }> = ({ data }) => (
     <div className="relative z-10 text-center px-4 mt-[35vh]">
       <AnimatedSection>
         <p className="text-stone-700 tracking-[0.3em] uppercase text-xs md:text-sm mb-4 font-serif">We Are Getting Married</p>
-        {/* Reduced font size */}
+        {/* Shortened names: Thanh Thảo & Tấn Rin */}
         <h1 className="font-script text-5xl md:text-7xl text-stone-800 drop-shadow-sm mb-2">
-          {data.bride.name} <span className="text-3xl md:text-4xl">&</span> {data.groom.name}
+          {data.bride.name.split(' ').slice(-2).join(' ')} <span className="text-3xl md:text-4xl">&</span> {data.groom.name.split(' ').slice(-2).join(' ')}
         </h1>
         <p className="font-serif italic text-lg text-stone-600 mt-4">{data.date.year}</p>
       </AnimatedSection>

@@ -8,7 +8,7 @@ interface BackgroundMusicProps {
 export const BackgroundMusic: React.FC<BackgroundMusicProps> = ({ audioRef, isOpened }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Updated to local file as requested
+  // File path relative to the public folder (root URL)
   const musicUrl = "/mp3.mp3"; 
 
   const toggleMusic = () => {

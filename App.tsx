@@ -21,7 +21,15 @@ const App: React.FC = () => {
     // 1. Play audio immediately within the click event handler
     // This satisfies browser autoplay policies because it's a direct user interaction
     if (audioRef.current) {
-      audioRef.current.play().catch(e => console.log("Audio play failed (browser policy):", e));
+      // Set volume to 50% for a pleasant start
+      audioRef.current.volume = 0.5;
+      const playPromise = audioRef.current.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log("Audio play failed (browser policy):", error);
+        });
+      }
     }
 
     // 2. Start animation

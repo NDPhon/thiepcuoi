@@ -60,9 +60,9 @@ export const HeroSection: React.FC<{ data: WeddingData }> = ({ data }) => (
         </p>
         {/* Shortened names: Thanh Thảo & Tấn Rin */}
         <h1 className="font-script text-5xl md:text-7xl text-stone-800 drop-shadow-sm mb-2">
-          {data.bride.name.split(" ").slice(-2).join(" ")}{" "}
+          {data.groom.name.split(" ").slice(-2).join(" ")}{" "}
           <span className="text-3xl md:text-4xl">&</span>{" "}
-          {data.groom.name.split(" ").slice(-2).join(" ")}
+          {data.bride.name.split(" ").slice(-2).join(" ")}
         </h1>
         <p className="font-serif italic text-lg text-stone-600 mt-4">
           {data.date.year}
@@ -123,14 +123,14 @@ export const CoupleSection: React.FC<{ data: WeddingData }> = ({ data }) => (
   <section className="py-10 text-center max-w-5xl mx-auto px-4">
     <AnimatedSection>
       <h2 className="font-serif text-2xl md:text-3xl text-stone-800 mb-6">
-        Trân Trọng Báo Tin Lễ Vu Quy Của
+        Trân Trọng Báo Tin Lễ Thành Hôn Của
       </h2>
       <div className="font-script text-5xl md:text-6xl text-sage-700 mb-2">
-        {data.bride.name}
+        {data.groom.name}
       </div>
       <div className="font-script text-3xl text-stone-400 mb-2">&</div>
       <div className="font-script text-5xl md:text-6xl text-sage-700 mb-10">
-        {data.groom.name}
+        {data.bride.name}
       </div>
 
       <div className="grid md:grid-cols-2 gap-6 md:gap-12 px-4">
@@ -196,7 +196,7 @@ export const EventDetailsSection: React.FC<{ data: WeddingData }> = ({
       <AnimatedSection>
         <div className="bg-[#eff2ef] rounded-3xl p-8 text-center max-w-2xl mx-auto shadow-inner border border-white">
           <h3 className="font-bold uppercase tracking-widest text-base md:text-lg mb-4 text-stone-800">
-            Tiệc Mừng Lễ Vu Quy
+            Tiệc Mừng Lễ Thành Hôn
           </h3>
 
           <div className="flex justify-center items-center gap-3 text-lg md:text-xl font-serif text-stone-700 mb-4">

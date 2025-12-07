@@ -49,6 +49,6 @@ export const WEDDING_DATA: WeddingData = {
     venue: "Nhà Hàng Tiệc Cưới An An",
     address: "Thành Phố Huế", // Updated generic address as user didn't specify street
     mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=Nhà+Hàng+Tiệc+Cưới+An+An+Huế",
+      "https://www.google.com/maps/place/Nh%C3%A0+h%C3%A0ng+An+An+Hu%E1%BA%BF/@16.5557052,107.6519405,17z/data=!3m1!4b1!4m6!3m5!1s0x31410adab12e9bb1:0x8f35495d7df5421d!8m2!3d16.5557052!4d107.6545154!16s%2Fg%2F11bwkfsqw7?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D",
   },
 };

@@ -34,16 +34,16 @@ export const WEDDING_DATA: WeddingData = {
     image: IMAGES.bride
   },
   date: {
-    day: 14,
-    month: 12,
-    year: 2025,
-    dayOfWeek: "Chủ Nhật",
-    lunarDate: "Tức Ngày 25 Tháng 10 Năm Ất Tỵ",
-    time: "10:30"
+    day: 6,
+    month: 2,
+    year: 2026,
+    dayOfWeek: "Thứ Sáu",
+    lunarDate: "Tức Ngày 19 Tháng 12 Năm Ất Tỵ",
+    time: "11:00"
   },
   location: {
-    venue: "Nhà Hàng Tiệc Cưới Romance",
-    address: "43 Trương Thiều, Hải Tiến, Phú Vang, Thành Phố Huế",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Nhà+Hàng+Tiệc+Cưới+Romance+43+Trương+Thiều+Hải+Tiến+Phú+Vang+Thành+Phố+Huế"
+    venue: "Nhà Hàng Tiệc Cưới An An",
+    address: "Thành Phố Huế", // Updated generic address as user didn't specify street
+    mapUrl: "https://www.google.com/maps/search/?api=1&query=Nhà+Hàng+Tiệc+Cưới+An+An+Huế"
   }
 };

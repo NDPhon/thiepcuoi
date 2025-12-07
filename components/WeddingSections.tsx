@@ -174,10 +174,10 @@ export const EventDetailsSection: React.FC<{ data: WeddingData }> = ({ data }) =
 
 // --- Section 5: Calendar ---
 export const CalendarSection: React.FC<{ date: WeddingData['date'] }> = ({ date }) => {
-    // Generate simple calendar grid for Dec 2025
-    // Dec 1, 2025 is a Monday.
-    const daysInMonth = 31;
-    const startDay = 1; // Monday (0=Sun, 1=Mon...)
+    // Generate simple calendar grid for Feb 2026
+    // Feb 1, 2026 is a Sunday.
+    const daysInMonth = 28;
+    const startDay = 0; // Sunday (0=Sun, 1=Mon...)
     
     const weeks = [];
     let day = 1;

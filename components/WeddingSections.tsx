@@ -103,19 +103,20 @@ export const CoupleSection: React.FC<{ data: WeddingData }> = ({ data }) => (
       </div>
 
       <div className="grid md:grid-cols-2 gap-6 md:gap-12 px-4">
-        {/* Changed h-[500px] to aspect-[3/4] to let image size naturally without forced crop */}
-        <div className="overflow-hidden rounded-t-[10rem] border-4 border-sage-100 shadow-xl">
+        {/* Fixed white space issue: Use relative container with aspect ratio + absolute image filling 100% */}
+        <div className="relative w-full aspect-[3/4] overflow-hidden rounded-t-[10rem] rounded-b-3xl border-4 border-sage-100 shadow-xl bg-sage-50">
            <img 
              src={data.groom.image} 
              alt="Groom" 
-             className="w-full h-auto aspect-[3/4] object-cover object-top hover:scale-105 transition-transform duration-700" 
+             className="absolute inset-0 w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" 
            />
         </div>
-        <div className="overflow-hidden rounded-t-[10rem] border-4 border-sage-100 shadow-xl md:mt-16">
+        
+        <div className="relative w-full aspect-[3/4] overflow-hidden rounded-t-[10rem] rounded-b-3xl border-4 border-sage-100 shadow-xl md:mt-16 bg-sage-50">
            <img 
              src={data.bride.image} 
              alt="Bride" 
-             className="w-full h-auto aspect-[3/4] object-cover object-top hover:scale-105 transition-transform duration-700" 
+             className="absolute inset-0 w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" 
            />
         </div>
       </div>

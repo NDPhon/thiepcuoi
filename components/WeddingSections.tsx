@@ -393,7 +393,7 @@ export const GallerySection: React.FC = () => (
       <div className="columns-2 md:columns-4 gap-4 space-y-4">
         <div className="break-inside-avoid rounded-lg overflow-hidden mb-4">
           <img
-            src={IMAGES.gallery6}
+            src={IMAGES.gallery4}
             className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
             alt="Gallery 1"
           />
@@ -401,7 +401,7 @@ export const GallerySection: React.FC = () => (
 
         <div className="break-inside-avoid rounded-lg overflow-hidden mb-4">
           <img
-            src={IMAGES.gallery3}
+            src={IMAGES.gallery6}
             className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
             alt="Gallery 2"
           />
@@ -409,7 +409,7 @@ export const GallerySection: React.FC = () => (
 
         <div className="break-inside-avoid rounded-lg overflow-hidden mb-4">
           <img
-            src={IMAGES.gallery4}
+            src={IMAGES.gallery3}
             className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
             alt="Gallery 3"
           />
@@ -417,7 +417,7 @@ export const GallerySection: React.FC = () => (
 
         <div className="break-inside-avoid rounded-lg overflow-hidden mb-4">
           <img
-            src={IMAGES.gallery5}
+            src={IMAGES.gallery1}
             className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
             alt="Gallery 4"
           />
@@ -433,7 +433,7 @@ export const GallerySection: React.FC = () => (
 
         <div className="break-inside-avoid rounded-lg overflow-hidden mb-4">
           <img
-            src={IMAGES.gallery1}
+            src={IMAGES.gallery5}
             className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
             alt="Gallery 6"
           />

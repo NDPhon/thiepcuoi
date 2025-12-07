@@ -11,12 +11,12 @@ export const IMAGES = {
   moment1: "/4.jpg", // Section 4 left photo
   moment2: "/6.jpg", // Section 4 right photo
 
-  gallery1: "/10.jpg",
+  gallery1: "/6.jpg",
   gallery2: "/9.jpg",
   gallery3: "/3.jpg",
-  gallery4: "/4.jpg",
-  gallery5: "/6.jpg",
-  gallery6: "/8.jpg",
+  gallery4: "/8.jpg",
+  gallery5: "/10.jpg",
+  gallery6: "/4.jpg",
   footer: "/1.jpg", // Section 8 - temporarily changed to 1.jpg
 };
 

@@ -7,22 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Overriding 'sage' with the new warm tones to update the entire app theme
+        // Redefining 'sage' to be 'Brown/Earth' tones to update the theme globally
         sage: {
-          50: '#f9f6f2', // Very light cream
-          100: '#f2e9e1', // Soft sand
-          200: '#e5d4c5', // Muted tan
-          300: '#d7c0ae', 
-          400: '#C4A484', // Requested secondary color (Light Brown/Tan)
-          500: '#cf9c75', 
-          600: '#B87C4C', // Requested primary color (Terracotta/Bronze)
-          700: '#a36a3e', // Deep bronze
-          800: '#8c5b35', // Dark chocolate brown
-          900: '#754c2c',
+          50: '#FAF7F2',  // Light Linen
+          100: '#F2ECE4', // Soft Parchment
+          200: '#E6D5C3', // Muted Tan
+          300: '#D4BAA1', // Sandstone
+          400: '#B08968', // Medium Warm Brown
+          500: '#9C6644', // Rich Terracotta Brown
+          600: '#7F5539', // Coffee Brown (Main Primary)
+          700: '#6D4C41', // Deep Espresso
+          800: '#4E342E', // Dark Chocolate
+          900: '#3E2723', // Black Coffee
         },
         gold: {
-          400: '#d4af37',
-          500: '#c5a028',
+          400: '#C5A059', // Antique Gold
+          500: '#B48A32', // Rich Gold
         }
       },
       fontFamily: {

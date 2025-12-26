@@ -8,18 +8,22 @@
     scroll-behavior: smooth;
   }
   
-  /* Custom scrollbar matched to the new theme */
+  /* Custom scrollbar matched to the new brown theme */
   ::-webkit-scrollbar {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #f9f6f2; /* sage-50 equivalent */
+    background: #FAF7F2; /* sage-50 equivalent */
   }
   ::-webkit-scrollbar-thumb {
-    background: #C4A484; /* sage-400 equivalent */
+    background: #B08968; /* sage-400 equivalent */
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #B87C4C; /* sage-600 equivalent */
+    background: #7F5539; /* sage-600 equivalent */
+  }
+
+  body {
+    @apply selection:bg-sage-200 selection:text-sage-900;
   }
 }

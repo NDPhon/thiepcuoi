@@ -464,49 +464,55 @@ interface FooterSectionProps {
 }
 
 export const FooterSection: React.FC<FooterSectionProps> = ({ onClose }) => (
-  <section className="relative h-screen min-h-[600px] w-full overflow-hidden flex flex-col items-center justify-center">
-    <div className="absolute inset-0">
-      {/* Dùng object-cover để ảnh giống với Hero Section */}
-      <img
-        src={IMAGES.footer}
-        alt="Thank you"
-        className="w-full h-full object-cover object-top opacity-90"
-      />
-      {/* Thêm gradient overlay tương tự HeroSection */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/90"></div>
-    </div>
+  <section className="relative h-screen min-h-[600px] w-full overflow-hidden flex items-center justify-center">
+    {/* Background */}
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{ backgroundImage: `url('${IMAGES.footer}')` }}
+    />
 
-    <AnimatedSection className="relative z-10 text-center text-brown-700 px-4 mt-[30vh]">
-      <h2 className="font-script text-6xl md:text-8xl mb-4 drop-shadow-lg">
-        Thank You
-      </h2>
-      <p className="font-serif text-lg md:text-xl italic opacity-90">
+    {/* Overlay giống Envelope */}
+    <div className="absolute inset-0 bg-white/70"></div>
+
+    <AnimatedSection className="relative z-10 text-center px-4 space-y-8">
+      {/* Heading */}
+      <div className="space-y-3">
+        <h2 className="font-script text-6xl md:text-8xl text-sage-600">
+          Thank You
+        </h2>
+        <div className="h-px w-24 bg-stone-400 mx-auto"></div>
+      </div>
+
+      {/* Sub text */}
+      <p className="font-serif text-lg md:text-xl italic text-stone-600">
         Rất hân hạnh được đón tiếp!
       </p>
 
-      {/* Close Button / Back to Envelope */}
+      {/* Close button – đồng bộ nút Open */}
       <div
         onClick={onClose}
-        className="mt-8 border border-white/50 inline-block p-4 rounded-full animate-bounce cursor-pointer hover:bg-white/10 transition-colors group"
+        className="group cursor-pointer flex flex-col items-center gap-4 mt-12 animate-bounce"
         title="Đóng thiệp"
       >
-        <svg
-          className="w-6 h-6 transform group-hover:scale-110 transition-transform"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 10l7-7m0 0l7 7m-7-7v18"
-          />
-        </svg>
+        <div className="w-16 h-16 rounded-full border border-stone-400 flex items-center justify-center bg-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+          <svg
+            className="h-8 w-8 text-sage-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
+          </svg>
+        </div>
+        <span className="text-sm tracking-widest text-stone-500 uppercase">
+          - Đóng thiệp -
+        </span>
       </div>
-      <p className="text-xs uppercase tracking-widest mt-2 opacity-70">
-        Đóng thiệp
-      </p>
     </AnimatedSection>
   </section>
 );

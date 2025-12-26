@@ -7,17 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Overriding 'sage' with the new warm tones to update the entire app theme
         sage: {
-          50: '#f4f7f4',
-          100: '#e3ebe3',
-          200: '#c5d8c5',
-          300: '#9dbf9d',
-          400: '#76a076',
-          500: '#558355',
-          600: '#416641',
-          700: '#355135',
-          800: '#2d412d',
-          900: '#263626',
+          50: '#f9f6f2', // Very light cream
+          100: '#f2e9e1', // Soft sand
+          200: '#e5d4c5', // Muted tan
+          300: '#d7c0ae', 
+          400: '#C4A484', // Requested secondary color (Light Brown/Tan)
+          500: '#cf9c75', 
+          600: '#B87C4C', // Requested primary color (Terracotta/Bronze)
+          700: '#a36a3e', // Deep bronze
+          800: '#8c5b35', // Dark chocolate brown
+          900: '#754c2c',
         },
         gold: {
           400: '#d4af37',

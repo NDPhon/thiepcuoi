@@ -87,13 +87,13 @@ export const FamilySection: React.FC<{ data: WeddingData }> = ({ data }) => (
       <div className="grid md:grid-cols-2 gap-8 relative z-10">
         <div className="text-center md:text-right space-y-1">
           <h3 className="font-bold uppercase text-sage-800 text-xs tracking-widest mb-3">
-            Nhà Gái
+            Nhà Trai
           </h3>
           <p className="font-serif text-lg md:text-xl text-stone-700">
-            {data.bride.parents.father}
+            {data.groom.parents.father}
           </p>
           <p className="font-serif text-lg md:text-xl text-stone-700">
-            {data.bride.parents.mother}
+            {data.groom.parents.mother}
           </p>
         </div>
 
@@ -103,13 +103,13 @@ export const FamilySection: React.FC<{ data: WeddingData }> = ({ data }) => (
 
         <div className="text-center md:text-left space-y-1">
           <h3 className="font-bold uppercase text-sage-800 text-xs tracking-widest mb-3">
-            Nhà Trai
+            Nhà Gái
           </h3>
           <p className="font-serif text-lg md:text-xl text-stone-700">
-            {data.groom.parents.father}
+            {data.bride.parents.father}
           </p>
           <p className="font-serif text-lg md:text-xl text-stone-700">
-            {data.groom.parents.mother}
+            {data.bride.parents.mother}
           </p>
         </div>
       </div>

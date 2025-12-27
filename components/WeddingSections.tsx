@@ -122,7 +122,7 @@ export const CoupleSection: React.FC<{ data: WeddingData }> = ({ data }) => (
   <section className="py-10 text-center max-w-5xl mx-auto px-4">
     <AnimatedSection>
       <h2 className="font-serif text-2xl md:text-3xl text-stone-800 mb-6">
-        Trân Trọng Báo Tin Lễ Vu Quy Của
+        Trân Trọng Báo Tin Lễ Thành Hôn Của
       </h2>
       <div className="font-script text-5xl md:text-6xl text-sage-700 mb-2">
         {data.groom.name}

@@ -195,7 +195,7 @@ export const EventDetailsSection: React.FC<{ data: WeddingData }> = ({
       <AnimatedSection>
         <div className="bg-[#eff2ef] rounded-3xl p-8 text-center max-w-2xl mx-auto shadow-inner border border-white">
           <h3 className="font-bold uppercase tracking-widest text-base md:text-lg mb-4 text-stone-800">
-            Tiệc Mừng Lễ Vu Quy
+            Tiệc Mừng Lễ Thành Hôn
           </h3>
 
           <div className="flex justify-center items-center gap-3 text-lg md:text-xl font-serif text-stone-700 mb-4">
